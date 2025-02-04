@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Message for Fayee</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #fce4e6, #fff8e7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #555;
+            overflow: hidden;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            animation: zoomIn 1s ease-in-out;
+        }
+
+        .image-container {
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .image-container img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.3s ease;
+        }
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+
+        h1 {
+            color: #d81b60;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease-in-out;
+            font-family: 'Lobster', cursive;
+        }
+
+        .question {
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-in-out forwards;
+        }
+
+        .question h2 {
+            color: #9c27b0;
+        }
+
+        .open-button {
+            background: linear-gradient(to right, #ff80ab, #ff5722);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            animation: pulse 1.5s infinite;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .open-button:hover {
+            background: linear-gradient(to right, #f57f17, #e64a19);
+            transform: scale(1.02);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .message-container {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            background-color: rgba(250, 240, 230, 0.85);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .whatsapp-button {
+            display: inline-block;
+            background: linear-gradient(to right, #25D366, #1DA851);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .whatsapp-button:hover {
+            background: linear-gradient(to right, #1DA851, #1DA851);
+            transform: scale(1.02);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0;}
+            to { transform: scale(1); opacity: 1;}
+        }
+
+        /* Add Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Arial&display=swap');
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="image-container">
+            <img src="img/fayee.jpg" alt="Fayee">
+        </div>
+
+        <h1>A Special Message for Fayee</h1>
+
+        <div class="question">
+            <h2>Remember Saturday?</h2>
+            <p>I've been thinking about it...</p>
+        </div>
+
+        <div class="question">
+            <h2>How are you *really* doing?</h2>
+            <p>I mean, deep down?</p>
+        </div>
+
+        <div class="question">
+            <h2>Is there something you're not telling me?</h2>
+            <p>I'm here to listen, always.</p>
+        </div>
+
+        <button class="open-button" onclick="showMessage()">Reveal Message</button>
+
+        <div class="message-container" id="messageContainer">
+            <p>Hey Fayee, to be honest. This whole thing has been weighing on me. Things have been a bit off between us lately, and it's been bothering me a lot. Kama kuna kitu unataka kuongea about it, including what you wanted to tell me on Saturday, nishow. I really value our friendship, and I'd like to understand what's going on. I just need some clarity. And, by the way, your birthday is this month. I really don't want you to turn another year older with this distance between us. It doesn't feel right.  If you're ready, I'd really like to talk things through and see if we can fix this. But if you're not, that's okay too. Just let me know, Thanks.</p>
+            <a href="https://wa.me/254773743248" class="whatsapp-button" target="_blank">Let's Talk about it</a>
+        </div>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("messageContainer").style.display = "block";
+            document.querySelector(".open-button").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
