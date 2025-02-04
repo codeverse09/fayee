@@ -83,35 +83,6 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
-        .message-container {
-            display: none;
-            margin-top: 20px;
-            padding: 20px;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            background-color: rgba(250, 240, 230, 0.85);
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        .whatsapp-button {
-            display: inline-block;
-            background: linear-gradient(to right, #25D366, #1DA851);
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 6px;
-            text-decoration: none;
-            margin-top: 10px;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        .whatsapp-button:hover {
-            background: linear-gradient(to right, #1DA851, #1DA851);
-            transform: scale(1.02);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
         /* Keyframes for animations */
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -169,20 +140,10 @@
             <p>I'm here to listen, always.</p>
         </div>
 
-        <button class="open-button" onclick="showMessage()">Reveal Message</button>
+        <a href="message.html" class="open-button">Reveal Message</a>
 
-        <div class="message-container" id="messageContainer">
-            <p>Hey Fayee, to be honest. This whole thing has been weighing on me. Things have been a bit off between us lately, and it's been bothering me a lot. Kama kuna kitu unataka kuongea about it, including what you wanted to tell me on Saturday, nishow. I really value our friendship, and I'd like to understand what's going on. I just need some clarity. And, by the way, your birthday is this month. I really don't want you to turn another year older with this distance between us. It doesn't feel right.  If you're ready, I'd really like to talk things through and see if we can fix this. But if you're not, that's okay too. Just let me know, Thanks.</p>
-            <a href="https://wa.me/254773743248" class="whatsapp-button" target="_blank">Let's Talk about it</a>
-        </div>
     </div>
 
-    <script>
-        function showMessage() {
-            document.getElementById("messageContainer").style.display = "block";
-            document.querySelector(".open-button").style.display = "none";
-        }
-    </script>
 
 </body>
 </html>
