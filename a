@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message for Fayee</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #fce4e6, #fff8e7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: #555;
+        }
+
+        .message-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .whatsapp-button {
+            display: inline-block;
+            background: linear-gradient(to right, #25D366, #1DA851);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .whatsapp-button:hover {
+            background: linear-gradient(to right, #1DA851, #1DA851);
+            transform: scale(1.02);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        video {
+            display: none; /* Hide the video */
+        }
+    </style>
+</head>
+<body>
+    <div class="message-container">
+        <p>Hey Fayee, to be honest. This whole thing has been weighing on me. Things have been a bit off between us lately, and it's been bothering me a lot. Kama kuna kitu unataka kuongea about it, including what you wanted to tell me on Saturday, nishow. I really value our friendship, and I'd like to understand what's going on. I just need some clarity. And, by the way, your birthday is this month. I really don't want you to turn another year older with this distance between us. It doesn't feel right.  If you're ready, I'd really like to talk things through and see if we can fix this. But if you're not, that's okay too. Just let me know, Thanks.</p>
+        <a href="https://wa.me/254773743248" class="whatsapp-button" target="_blank">Let's Talk about it</a>
+    </div>
+
+    <video id="audio" autoplay preload="auto">
+        <source src="Lv_0_20250205005121.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+
+    <script>
+        var video = document.getElementById("audio");
+
+        function setVolume(volume) {
+            video.volume = volume;
+        }
+
+        setVolume(0.3); // Adjust as needed
+
+        document.addEventListener('DOMContentLoaded', function() {
+            video.play().catch(function(error) {
+                console.log("Autoplay prevented:", error);
+            });
+
+            video.addEventListener('ended', function() {
+                video.pause(); // Stop playing when the music ends
+            });
+        });
+    </script>
+</body>
+</html>
