@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,6 +48,10 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
+
+        video {
+            display: none; /* Hide the video */
+        }
     </style>
 </head>
 <body>
@@ -55,5 +59,33 @@
         <p>Hey Fayee, to be honest. This whole thing has been weighing on me. Things have been a bit off between us lately, and it's been bothering me a lot. Kama kuna kitu unataka kuongea about it, including what you wanted to tell me on Saturday, nishow. I really value our friendship, and I'd like to understand what's going on. I just need some clarity. And, by the way, your birthday is this month. I really don't want you to turn another year older with this distance between us. It doesn't feel right.  If you're ready, I'd really like to talk things through and see if we can fix this. But if you're not, that's okay too. Just let me know, Thanks.</p>
         <a href="https://wa.me/254773743248" class="whatsapp-button" target="_blank">Let's Talk about it</a>
     </div>
+
+    <video id="audio" autoplay loop preload="auto">
+        <source src="Lv_0_20250205005121.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+
+    <script>
+        var video = document.getElementById("audio");
+
+        function setVolume(volume) {
+          video.volume = volume;
+        }
+
+        setVolume(0.3); // Adjust as needed
+
+        document.addEventListener('DOMContentLoaded', function() {
+           video.play().catch(function(error) {
+             console.log("Autoplay prevented:", error);
+             let playButton = document.createElement('button');
+             playButton.textContent = "Play Music";
+             playButton.onclick = function() {
+               video.play();
+               playButton.remove();
+             };
+             document.body.appendChild(playButton);
+           });
+        });
+    </script>
 </body>
 </html>
