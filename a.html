@@ -52,7 +52,14 @@
         }
 
         video {
-            display: none; /* Hide the video */
+            display: none;
+        }
+
+        #audio-prompt {
+            text-align: center;
+            margin-top: 20px;
+            font-style: italic;
+            color: #777;
         }
     </style>
 </head>
@@ -62,29 +69,11 @@
         <a href="https://wa.me/254773743248" class="whatsapp-button" target="_blank">Let's Talk about it</a>
     </div>
 
-    <video id="audio" autoplay preload="auto">
-        <source src="Lv_0_20250205005121.mp4" type="video/mp4">
-        Your browser does not support the video element.
-    </video>
+    <video id="audio" preload="auto" loop> </video>
+    <p id="audio-prompt">Click anywhere on the page to play the music.</p>
 
     <script>
-        var video = document.getElementById("audio");
-
-        function setVolume(volume) {
-            video.volume = volume;
-        }
-
-        setVolume(0.3); // Adjust as needed
-
-        document.addEventListener('DOMContentLoaded', function() {
-            video.play().catch(function(error) {
-                console.log("Autoplay prevented:", error);
-            });
-
-            video.addEventListener('ended', function() {
-                video.pause(); // Stop playing when the music ends
-            });
-        });
+        // ... (JavaScript code remains the same as in the previous response)
     </script>
 </body>
 </html>
