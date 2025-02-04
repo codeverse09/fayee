@@ -26,6 +26,7 @@
             width: 90%;
             animation: fadeIn 1s ease-in-out;
         }
+
         .whatsapp-button {
             display: inline-block;
             background: linear-gradient(to right, #25D366, #1DA851);
@@ -44,6 +45,7 @@
             transform: scale(1.02);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -60,7 +62,7 @@
         <a href="https://wa.me/254773743248" class="whatsapp-button" target="_blank">Let's Talk about it</a>
     </div>
 
-    <video id="audio" autoplay loop preload="auto">
+    <video id="audio" autoplay preload="auto">
         <source src="Lv_0_20250205005121.mp4" type="video/mp4">
         Your browser does not support the video element.
     </video>
@@ -69,22 +71,19 @@
         var video = document.getElementById("audio");
 
         function setVolume(volume) {
-          video.volume = volume;
+            video.volume = volume;
         }
 
         setVolume(0.3); // Adjust as needed
 
         document.addEventListener('DOMContentLoaded', function() {
-           video.play().catch(function(error) {
-             console.log("Autoplay prevented:", error);
-             let playButton = document.createElement('button');
-             playButton.textContent = "Play Music";
-             playButton.onclick = function() {
-               video.play();
-               playButton.remove();
-             };
-             document.body.appendChild(playButton);
-           });
+            video.play().catch(function(error) {
+                console.log("Autoplay prevented:", error);
+            });
+
+            video.addEventListener('ended', function() {
+                video.pause(); // Stop playing when the music ends
+            });
         });
     </script>
 </body>
